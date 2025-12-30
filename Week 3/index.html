@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gitam Website</title>
+
+  <style>
+    /* Reset default spacing */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #f4f6f9; /* soft neutral background */
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Frame appearance cleanup */
+    frame {
+      border: none;
+      background-color: #ffffff;
+    }
+
+    /* Frameset visual smoothing */
+    frameset {
+      border: none;
+      background-color: #e9ecf1;
+    }
+  </style>
+</head>
+
+<frameset rows="15%,11%,*" border="0" frameborder="0" name="fr1">
+
+  <frameset cols="15%,*">
+    <frame src="Logo.html" />
+    <frame src="Head.html" />
+  </frameset>
+
+  <frameset cols="20%,20%,20%,20%,20%">
+    <frame src="h1.html" name="frame1">
+    <frame src="h2.html" name="frame2">
+    <frame src="h4.html" name="frame3">
+    <frame src="h3.html" name="frame4">
+    <frame src="h5.html" name="frame5">
+  </frameset>
+
+  <frameset cols="22%,*,22%">
+    <frame src="Vertical.html" name="Pr" />
+
+    <frameset rows="100%,*">
+      <frame src="Login.html" name="ff" />
+    </frameset>
+
+    <frame src="RVertical.html" name="Pr1" />
+  </frameset>
+
+</frameset>
+</html>
