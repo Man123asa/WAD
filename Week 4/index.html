@@ -36,38 +36,18 @@
       width: 85%;
     }
 
-    .top iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
     .nav {
       height: 11%;
       display: flex;
-      justify-content: center; 
-      align-items: center;     
       background-color: #F0E0C1;
-      gap: 15px;               
     }
 
-    .nav-btn {
-      display: inline-block;
-      padding: 10px 22px;
-      background-color: #1f3c88;
-      color: white;
-      text-decoration: none;
-      border-radius: 22px;
-      font-weight: bold;
-      transition: background-color 0.3s ease, transform 0.2s ease;
+    .nav iframe {
+      width: 20%;
+      border: none;
     }
 
-    .nav-btn:hover {
-      background-color: #162d63;
-      transform: scale(1.05);
-    }
-
-    
+    /* Main content area */
     .main {
       flex: 1;
       display: flex;
@@ -84,8 +64,7 @@
     .right {
       width: 22%;
     }
-
-    .main iframe {
+    iframe {
       width: 100%;
       height: 100%;
       border: none;
@@ -97,7 +76,6 @@
 <body>
   <div class="container">
 
-   
     <div class="top">
       <div class="logo">
         <iframe src="Logo.html"></iframe>
@@ -107,33 +85,24 @@
       </div>
     </div>
 
-   
     <div class="nav">
-      <a href="Login.html" target="contentFrame" class="nav-btn">Home</a>
-      <a href="Aboutus.html" target="contentFrame" class="nav-btn">KRC</a>
-      <a href="p4.html" target="contentFrame" class="nav-btn">G-Security</a>
-      <a href="p3.html" target="contentFrame" class="nav-btn">G-Help</a>
-      <a href="p5.html" target="contentFrame" class="nav-btn">G-Explore</a>
+      <iframe src="h1.html" target="contentFrame"></iframe>
+      <iframe src="h2.html" target="contentFrame"></iframe>
+      <iframe src="h4.html" target="contentFrame"></iframe>
+      <iframe src="h3.html" target="contentFrame"></iframe>
+      <iframe src="h5.html" target="contentFrame"></iframe>
     </div>
 
-  
     <div class="main">
-     
       <div class="left">
-        <iframe src="Vertical.html" name="contentFrame"></iframe>
+        <iframe src="Vertical.html" target="contentFrame"></iframe>
       </div>
 
-      
       <div class="center">
         <iframe src="Login.html" name="contentFrame"></iframe>
       </div>
 
-     
       <div class="right">
         <iframe src="RVertical.html"></iframe>
       </div>
     </div>
-
-  </div>
-</body>
-</html>
