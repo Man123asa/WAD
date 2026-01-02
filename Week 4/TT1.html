@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Time Table</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+    }
+
+    h3 {
+      margin: 15px 0 10px;
+      color: #1f3c88;
+    }
+
+    table {
+      width: 100%;
+      background-color: #ffffff;
+      margin-bottom: 25px;
+      border-collapse: collapse;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    th, td {
+      padding: 8px 10px;
+      text-align: center;
+      font-size: 14px;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #1f3c88;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #f1f4fa;
+    }
+
+    td[rowspan] {
+      background-color: #ffeaa7;
+      font-weight: bold;
+    }
+    
+    .course-table th,
+    .course-table td {
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h3>Time Table</h3>
+
+  <table>
+    <tr>
+      <th>Day</th>
+      <th>8:00-9:00</th>
+      <th>9:00-10:00</th>
+      <th>10:00-11:00</th>
+      <th>11:00-12:00</th>
+      <th>12:00-1:00</th>
+      <th>1:00-2:00</th>
+      <th>2:00-3:00</th>
+      <th>3:00-4:00</th>
+    </tr>
+
+    <tr>
+      <th>Monday</th>
+      <td>CSEN3071</td>
+      <td>CSEN2031</td>
+      <td>CSEN2071</td>
+      <td>CSEN3032</td>
+      <td rowspan="5">LUNCH</td>
+      <td>CSEN3191</td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <th>Tuesday</th>
+      <td>CSEN2031P</td>
+      <td>CSEN2031P</td>
+      <td>CLAD2031</td>
+      <td>CLAD2031</td>
+      <td>AOE346</td>
+      <td>CSEN3071P</td>
+      <td>CSEN3071P</td>
+    </tr>
+
+    <tr>
+      <th>Wednesday</th>
+      <td>CSEN3032P</td>
+      <td>CSEN3032P</td>
+      <td>CSEN2031</td>
+      <td>CSEN3071</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <th>Thursday</th>
+      <td>CSEN3191</td>
+      <td>CSEN3032</td>
+      <td>CSEN2071</td>
+      <td>CSEN3071</td>
+      <td>AOE346</td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <th>Friday</th>
+      <td>CSEN2031</td>
+      <td>CSEN2071</td>
+      <td>CSEN3032</td>
+      <td>CSEN3191</td>
+      <td>AOE346</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <h3>Courses Registered</h3>
+
+  <table class="course-table">
+    <tr>
+      <th>Course Code</th>
+      <th>Course Name</th>
+    </tr>
+    <tr>
+      <td>CLAD2031</td>
+      <td>Preparation for Campus Placement-2</td>
+    </tr>
+    <tr>
+      <td>CSEN2031P</td>
+      <td>Artificial Intelligence Lab</td>
+    </tr>
+    <tr>
+      <td>CSEN2031</td>
+      <td>Artificial Intelligence</td>
+    </tr>
+    <tr>
+      <td>CSEN2071</td>
+      <td>Cryptography and Network Security</td>
+    </tr>
+    <tr>
+      <td>CSEN3032</td>
+      <td>Compiler Design</td>
+    </tr>
+    <tr>
+      <td>CSEN3071</td>
+      <td>Web Application Development and Software Frameworks Lab</td>
+    </tr>
+  </table>
+
+</body>
+</html>
