@@ -1,1 +1,31 @@
-
+<!DOCTYPE html>
+<html lang="en"> <!-- Added '=' here -->
+<head>
+    <meta charset="UTF-8"> <!-- Added '=' here -->
+    <title>JS Greetings</title>                                                    
+</head>
+<body>
+    
+    <script>
+        function greet() 
+	{
+            const now = new Date();
+            const time = now.getHours();
+            if (time < 12)
+	    {
+                document.write("Good Morning");
+            } 
+	    else if (time >= 12 && time <= 17) 
+	    {
+                document.write("Good Afternoon");
+            } 
+	    else if (time > 17) 
+	    {
+                document.write("Good Evening");
+            }
+        }
+        greet(); 
+    </script>		
+    
+</body>
+</html>
