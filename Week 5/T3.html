@@ -16,16 +16,19 @@
     <button onclick="calculate('/')">Divide</button>
     <h3 id="result"></h3>
     <script>
-        function calculate(operator) {
+        function calculate(operator) 
+        {
             let a=parseFloat(document.getElementById("num1").value);
             let b=parseFloat(document.getElementById("num2").value);
             let result;
 
-            if (isNaN(a) || isNaN(b)) {
+            if (isNaN(a) || isNaN(b)) 
+            {
                 document.getElementById("result").innerHTML = "❗ Please enter valid numbers";
                 return;
             }
-            switch (operator) {
+            switch (operator) 
+            {
                 case '+':
                     result=a+b;
                     break;
@@ -36,14 +39,15 @@
                     result=a*b;
                     break;
                 case '/':
-                    if (b === 0) {
+                    if (b === 0) 
+                    {
                         document.getElementById("result").innerHTML="❌ Cannot divide by zero";
                         return;
                     }
                     result=a/b;
                     break;
             }
-            document.getElementById("result").innerHTML="Result: " + result;
+            document.getElementById("result").innerHTML="Result: "+result;
         }
     </script>
 </body>
