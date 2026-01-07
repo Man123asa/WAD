@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        input {
+            display: block;
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 250px;
+        }
+        span {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>User Registration Form</h2>
+
+<form onsubmit="return validateForm()">
+
+    Name:
+    <input type="text" id="name">
+    <span id="nameError"></span>
+
+    Email:
+    <input type="text" id="email">
+    <span id="emailError"></span>
+
+    Password:
+    <input type="password" id="password">
+    <span id="passwordError"></span>
+
+    Phone Number:
+    <input type="text" id="phone">
+    <span id="phoneError"></span>
+
+    Date of Birth:
+    <input type="date" id="dob">
+    <br><br>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<script>
+function validateForm() {
+
+    let valid = true;
+
+    // Clear previous errors
+    document.getElementById("nameError").innerHTML = "";
+    document.getElementById("emailError").innerHTML = "";
+    document.getElementById("passwordError").innerHTML = "";
+    document.getElementById("phoneError").innerHTML = "";
+
+    // Name validation
+    let name = document.getElementById("name").value;
+    let nameRegex = /^[A-Za-z]{3,}$/;
+    if (!nameRegex.test(name)) {
+        document.getElementById("nameError").innerHTML =
+            "Name must contain at least 3 alphabets only";
+        valid = false;
+    }
+
+    // Email validation
+    let email = document.getElementById("email").value;
+    let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(email)) {
+        document.getElementById("emailError").innerHTML =
+            "Invalid email format (example@domain.com)";
+        valid = false;
+    }
+
+    // Password validation
+    let password = document.getElementById("password").value;
+    let passwordRegex =
+        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+    if (!passwordRegex.test(password)) {
+        document.getElementById("passwordError").innerHTML =
+            "Password must be 8+ chars with upper, lower, number & special char";
+        valid = false;
+    }
+
+    // Phone number validation
+    let phone = document.getElementById("phone").value;
+    let phoneRegex = /^[0-9]{10}$/;
+    if (!phoneRegex.test(phone)) {
+        document.getElementById("phoneError").innerHTML =
+            "Phone number must be exactly 10 digits";
+        valid = false;
+    }
+
+    return valid;
+}
+</script>
+
+</body>
+</html>
