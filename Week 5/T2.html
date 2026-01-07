@@ -6,31 +6,56 @@
 </head>
 <body>
 
-    <h2>Quiz Question</h2>
-    <p id="question">What is the capital of India?</p>
+<h2>JavaScript Quiz</h2>
 
-    <input type="text" id="answer" placeholder="Enter your answer">
-    <br><br>
+<p id="question"></p>
 
-    <button onclick="checkAnswer()">Submit</button>
+<input type="text" id="answer" placeholder="Enter your answer">
+<br><br>
 
-    <p id="result"></p>
+<button onclick="submitAnswer()">Submit</button>
 
-    <script>
-        function checkAnswer() {
-            const correctAnswer = "delhi";
-            const userAnswer = document.getElementById("answer").value.toLowerCase();
-            const result = document.getElementById("result");
+<p id="feedback"></p>
+<p id="score"></p>
 
-            if (userAnswer === correctAnswer) {
-                result.textContent = "✅ Correct Answer!";
-                result.style.color = "green";
-            } else {
-                result.textContent = "❌ Wrong Answer. Try again!";
-                result.style.color = "red";
-            }
+<script>
+    const quiz = [
+        { question: "What is the capital of India?", answer: "delhi" },
+        { question: "Which language is used for web scripting?", answer: "javascript" },
+        { question: "What does HTML stand for?", answer: "hypertext markup language" },
+        { question: "What is 5 + 3?", answer: "8" },
+        { question: "Which company developed Java?", answer: "sun microsystems" }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+
+    document.getElementById("question").innerText = quiz[currentQuestion].question;
+
+    function submitAnswer() {
+        let userAnswer = document.getElementById("answer").value.toLowerCase();
+        let feedback = document.getElementById("feedback");
+
+        if (userAnswer === quiz[currentQuestion].answer) {
+            feedback.innerText = "✅ Correct!";
+            score++;
+        } else {
+            feedback.innerText = "❌ Wrong! Correct answer is: " + quiz[currentQuestion].answer;
         }
-    </script>
+
+        currentQuestion++;
+        document.getElementById("answer").value = "";
+
+        if (currentQuestion < quiz.length) {
+            document.getElementById("question").innerText = quiz[currentQuestion].question;
+        } else {
+            document.getElementById("question").innerText = "Quiz Completed!";
+            document.getElementById("feedback").innerText = "";
+            document.getElementById("score").innerText =
+                "Your Score: " + score + " / " + quiz.length;
+        }
+    }
+</script>
 
 </body>
 </html>
