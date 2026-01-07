@@ -5,19 +5,13 @@
     <title>Interactive Quiz</title>
 </head>
 <body>
-
 <h2>JavaScript Quiz</h2>
-
 <p id="question"></p>
-
 <input type="text" id="answer" placeholder="Enter your answer">
 <br><br>
-
 <button onclick="submitAnswer()">Submit</button>
-
 <p id="feedback"></p>
 <p id="score"></p>
-
 <script>
     const quiz = [
         { question: "What is the capital of India?", answer: "Delhi" },
@@ -26,12 +20,9 @@
         { question: "What is 5 + 3?", answer: "8" },
         { question: "Which company developed Java?", answer: "Sun Microsystems" }
     ];
-
     let currentQuestion = 0;
     let score = 0;
-
     document.getElementById("question").innerText = quiz[currentQuestion].question;
-
     function submitAnswer() {
         let userAnswer = document.getElementById("answer").value.trim().toLowerCase();
         let correctAnswer = quiz[currentQuestion].answer.trim().toLowerCase();
@@ -47,7 +38,6 @@
 
         currentQuestion++;
         document.getElementById("answer").value = "";
-
         if (currentQuestion < quiz.length) {
             document.getElementById("question").innerText =
                 quiz[currentQuestion].question;
@@ -59,6 +49,5 @@
         }
     }
 </script>
-
 </body>
 </html>
