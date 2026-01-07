@@ -5,55 +5,46 @@
     <title>Interactive Calculator</title>
 </head>
 <body>
-
     <h2>Simple Calculator</h2>
-
     <input type="number" id="num1" placeholder="Enter first number">
     <br><br>
-
     <input type="number" id="num2" placeholder="Enter second number">
     <br><br>
-
     <button onclick="calculate('+')">Add</button>
     <button onclick="calculate('-')">Subtract</button>
     <button onclick="calculate('*')">Multiply</button>
     <button onclick="calculate('/')">Divide</button>
-
     <h3 id="result"></h3>
-
     <script>
         function calculate(operator) {
-            let a = parseFloat(document.getElementById("num1").value);
-            let b = parseFloat(document.getElementById("num2").value);
+            let a=parseFloat(document.getElementById("num1").value);
+            let b=parseFloat(document.getElementById("num2").value);
             let result;
 
             if (isNaN(a) || isNaN(b)) {
                 document.getElementById("result").innerHTML = "❗ Please enter valid numbers";
                 return;
             }
-
             switch (operator) {
                 case '+':
-                    result = a + b;
+                    result=a+b;
                     break;
                 case '-':
-                    result = a - b;
+                    result=a-b;
                     break;
                 case '*':
-                    result = a * b;
+                    result=a*b;
                     break;
                 case '/':
                     if (b === 0) {
-                        document.getElementById("result").innerHTML = "❌ Cannot divide by zero";
+                        document.getElementById("result").innerHTML="❌ Cannot divide by zero";
                         return;
                     }
-                    result = a / b;
+                    result=a/b;
                     break;
             }
-
-            document.getElementById("result").innerHTML = "Result: " + result;
+            document.getElementById("result").innerHTML="Result: " + result;
         }
     </script>
-
 </body>
 </html>
