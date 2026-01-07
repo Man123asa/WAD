@@ -14,38 +14,41 @@
 <p id="score"></p>
 <script>
     const quiz = [
-        { question: "What is the capital of India?", answer: "Delhi" },
-        { question: "Which language is used for web scripting?", answer: "JavaScript" },
-        { question: "What does HTML stand for?", answer: "HyperText Markup Language" },
-        { question: "What is 5 + 3?", answer: "8" },
-        { question: "Which company developed Java?", answer: "Sun Microsystems" }
+        { question:"What is the capital of India?", answer:"Delhi" },
+        { question:"Which language is used for web scripting?", answer:"JavaScript" },
+        { question:"What does HTML stand for?", answer:"HyperText Markup Language" },
+        { question:"What is 5 + 3?", answer:"8" },
+        { question:"Which company developed Java?", answer:"Sun Microsystems" }
     ];
-    let currentQuestion = 0;
-    let score = 0;
-    document.getElementById("question").innerText = quiz[currentQuestion].question;
+    let currentQuestion=0;
+    let score=0;
+    document.getElementById("question").innerText=quiz[currentQuestion].question;
     function submitAnswer() {
-        let userAnswer = document.getElementById("answer").value.trim().toLowerCase();
-        let correctAnswer = quiz[currentQuestion].answer.trim().toLowerCase();
-        let feedback = document.getElementById("feedback");
+        let userAnswer=document.getElementById("answer").value.trim().toLowerCase();
+        let correctAnswer=quiz[currentQuestion].answer.trim().toLowerCase();
+        let feedback=document.getElementById("feedback");
 
-        if (userAnswer === correctAnswer) {
-            feedback.innerText = "✅ Correct!";
+        if (userAnswer === correctAnswer) 
+        {
+            feedback.innerText="✅ Correct!";
             score++;
-        } else {
-            feedback.innerText =
-                "❌ Wrong! Correct answer is: " + quiz[currentQuestion].answer;
+        } 
+        else 
+        {
+            feedback.innerText="❌ Wrong! Correct answer is: "+quiz[currentQuestion].answer;
         }
 
         currentQuestion++;
-        document.getElementById("answer").value = "";
-        if (currentQuestion < quiz.length) {
-            document.getElementById("question").innerText =
-                quiz[currentQuestion].question;
-        } else {
-            document.getElementById("question").innerText = "Quiz Completed!";
-            document.getElementById("feedback").innerText = "";
-            document.getElementById("score").innerText =
-                "Your Score: " + score + " / " + quiz.length;
+        document.getElementById("answer").value="";
+        if (currentQuestion<quiz.length) 
+        {
+            document.getElementById("question").innerText=quiz[currentQuestion].question;
+        } 
+        else 
+        {
+            document.getElementById("question").innerText="Quiz Completed!";
+            document.getElementById("feedback").innerText="";
+            document.getElementById("score").innerText="Your Score: " + score + " / " + quiz.length;
         }
     }
 </script>
