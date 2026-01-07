@@ -20,11 +20,11 @@
 
 <script>
     const quiz = [
-        { question: "What is the capital of India?", answer: "delhi" },
-        { question: "Which language is used for web scripting?", answer: "javascript" },
-        { question: "What does HTML stand for?", answer: "hypertext markup language" },
+        { question: "What is the capital of India?", answer: "Delhi" },
+        { question: "Which language is used for web scripting?", answer: "JavaScript" },
+        { question: "What does HTML stand for?", answer: "HyperText Markup Language" },
         { question: "What is 5 + 3?", answer: "8" },
-        { question: "Which company developed Java?", answer: "sun microsystems" }
+        { question: "Which company developed Java?", answer: "Sun Microsystems" }
     ];
 
     let currentQuestion = 0;
@@ -33,21 +33,24 @@
     document.getElementById("question").innerText = quiz[currentQuestion].question;
 
     function submitAnswer() {
-        let userAnswer = document.getElementById("answer").value.toLowerCase();
+        let userAnswer = document.getElementById("answer").value.trim().toLowerCase();
+        let correctAnswer = quiz[currentQuestion].answer.trim().toLowerCase();
         let feedback = document.getElementById("feedback");
 
-        if (userAnswer === quiz[currentQuestion].answer) {
+        if (userAnswer === correctAnswer) {
             feedback.innerText = "✅ Correct!";
             score++;
         } else {
-            feedback.innerText = "❌ Wrong! Correct answer is: " + quiz[currentQuestion].answer;
+            feedback.innerText =
+                "❌ Wrong! Correct answer is: " + quiz[currentQuestion].answer;
         }
 
         currentQuestion++;
         document.getElementById("answer").value = "";
 
         if (currentQuestion < quiz.length) {
-            document.getElementById("question").innerText = quiz[currentQuestion].question;
+            document.getElementById("question").innerText =
+                quiz[currentQuestion].question;
         } else {
             document.getElementById("question").innerText = "Quiz Completed!";
             document.getElementById("feedback").innerText = "";
