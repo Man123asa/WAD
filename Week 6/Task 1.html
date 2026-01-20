@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+	<meta charset="UTF-8"> 
+    	<title>JS POPUP</title>                                                    
+</head>
+<body>
+	<form>
+		<button type="button" onclick="d()"> Display Date </button>
+		<input type="text" id="wow1"/>
+		<button type="button" onclick="fact()"> Calculate Factorial </button>
+    	</form>
+    	<script>
+        	function d() 
+		{
+            		const date=new Date();
+			const ds=date.toLocaleDateString();
+	    		document.getElementById("wow1").value=ds;
+	    	}
+		function fact()
+		{
+			let num=prompt("Enter a number to find its Factorial");
+			let n=parseInt(num);
+			if(isNaN(n)||n<0)
+	    		{
+				alert("Invalid number! Cannot find factorial for negative number");
+			}
+			else
+			{
+				let f=1;
+				for(let i=1;i<=n;i++)
+				{
+					f*=i;
+                		} 
+				alert("Factorial of " + n + " is "+f);
+	    		}
+		}
+    	</script>		
+</body>
+</html>
