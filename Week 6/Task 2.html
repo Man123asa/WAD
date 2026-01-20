@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+	<meta charset="UTF-8"> 
+    	<title>JS Table Calculation</title>                                                    
+</head>
+<body>
+	<form>
+		<p><b> Number </b></p>
+		<input type="number" id="wow1" placeholder="Enter the number here"/>
+		<button type="button" onclick="fact()"> Generate</button>
+    	</form>
+    	<div id="op"></div>
+    	<script>
+        	function fact() 
+		{
+            		const inputElement=document.getElementById("wow1");
+	    		const outputDiv=document.getElementById("op");
+	    		const num=parseInt(inputElement.value);
+	    		outputDiv.innerHTML="";
+
+            		if (isNaN(num)||num <= 0)
+	    		{
+                		outputDiv.innerHTML="Invalid number! Cannot generate a table for this number";
+            		} 
+	    		else 
+	    		{
+				let tableHTML = "<h4>Multiplication Table for "+num+"</h4>";
+				for(let i=1;i<=10;i++)
+				{
+					let time=num*i;
+                			tableHTML+=num+" x "+i+" = "+time+"<br>";
+            			} 
+				outputDiv.innerHTML=tableHTML;
+	    		}
+		}
+    	</script>		
+</body>
+</html>
