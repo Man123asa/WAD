@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> JS Password</title>
+</head>
+<body>
+	<h3> Password Visibility Toggle </h3>
+	<label for="w1"> Password </label>
+	<input type="password" id="w1" name="ps"></input>
+	<br>
+	<input type="checkbox" id="w2" onclick="toggle()"/>
+	<label for="w2"> Show Password </label>
+	
+	<script>
+		function toggle()
+		{
+			var s1=document.getElementById("w1");
+			var s2=document.getElementById("w2");
+			if(s2.checked)
+			{
+				s1.type="text";
+			}
+			else
+			{
+				s1.type="password";
+			}
+		}
+	</script>
+</body>
+</html>
