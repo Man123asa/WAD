@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation</title>
+    <style>
+        .err-msg { color: red; font-size: 14px; display: block; height: 18px; margin-top: 5px; }
+        div { margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+    <h2> Registration Form </h2>
+    <form id="rf" novalidate>
+        <div>
+            <label for="w1"> Name </label>
+            <input type="text" id="w1" name="name">
+            <span id="ne" class="err-msg"></span>
+        </div>
+        <div>
+            <label for="w2"> Email </label>
+            <input type="text" id="w2" name="email">
+            <span id="ee" class="err-msg"></span>
+        </div>
+        <div>
+            <label for="w3"> Password </label>
+            <input type="password" id="w3" name="password">
+            <span id="pe" class="err-msg"></span>
+        </div>
+        <div>
+            <label for="w4"> Confirm Password </label>
+            <input type="password" id="w4" name="Cpassword">
+            <span id="nppe" class="err-msg"></span>
+        </div>
+        <div>
+            <label for="w5"> Phone Number </label>
+            <input type="text" id="w5" name="phone">
+            <span id="pne" class="err-msg"></span>
+        </div>
+        <div>
+            <legend> Gender </legend>
+            <input type="radio" id="w61" name="gender" value="Male"> <label for="w61">Male</label>
+            <input type="radio" id="w62" name="gender" value="Female"> <label for="w62">Female</label>
+            <input type="radio" id="w63" name="gender" value="Other"> <label for="w63">Other</label>
+            <span id="ge" class="err-msg"></span>
+        </div>
+        <div>
+            <input type="checkbox" id="w7" name="tc">
+            <label for="w7"> Terms & conditions</label>
+            <span id="tce" class="err-msg"></span>
+        </div>
+        <button type="submit">Register</button>
+    </form>
+
+    <script>
+        document.getElementById('rf').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            let isValid = true;
+
+            document.querySelectorAll('.err-msg').forEach(el => el.innerText = "");
+
+           
+            const name = document.getElementById('w1').value.trim();
+            if (name === "") {
+                document.getElementById('ne').innerText = "Name field should not be empty.";
+                isValid = false;
+            }
+
+            const email = document.getElementById('w2').value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                document.getElementById('ee').innerText = "Email should be in a valid format.";
+                isValid = false;
+            }
+
+            
+            const password = document.getElementById('w3').value;
+            if (password.length < 8) {
+                document.getElementById('pe').innerText = "Password should contain at least 8 characters.";
+                isValid = false;
+            }
+
+           
+            const confirmPassword = document.getElementById('w4').value;
+            if (confirmPassword !== password || confirmPassword === "") {
+                document.getElementById('nppe').innerText = "Confirm Password must match the Password field.";
+                isValid = false;
+            }
+
+           
+            const mobile = document.getElementById('w5').value;
+            const mobileRegex = /^\d{10}$/;
+            if (!mobileRegex.test(mobile)) {
+                document.getElementById('pne').innerText = "Mobile number should be a valid 10-digit number.";
+                isValid = false;
+            }
+
+            
+            const gender = document.querySelector('input[name="gender"]:checked');
+            if (!gender) {
+                document.getElementById('ge').innerText = "User must select a gender.";
+                isValid = false;
+            }
+
+           
+            const terms = document.getElementById('w7').checked;
+            if (!terms) {
+                document.getElementById('tce').innerText = "User must accept the Terms & Conditions.";
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert("Form submitted successfully!");
+            }
+        });
+    </script>
+</body>
+</html>
