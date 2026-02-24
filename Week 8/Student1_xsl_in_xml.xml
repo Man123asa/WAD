@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Student_XSLT.xsl"?> 
+<Student>
+	<student id="1">
+		<sname> 
+			<fname>Raghu</fname>
+			<lname>Sharma</lname>
+		</sname>
+		<srn> 2023001 </srn>
+		<syear> 3 </syear>
+		<sdept> cse </sdept>
+		<sGpa> 9.0 </sGpa>
+		<smail> r001@gitam.in </smail>
+	</student>
+	
+	<student id="2">
+		<sname> 
+			<fname>Ankita</fname>
+			<lname>Verma</lname>
+		</sname>
+		<srn> 2023002 </srn>
+		<syear> 3 </syear>
+		<sdept> cse </sdept>
+		<sGpa> 9.2 </sGpa>
+		<smail> a002@gitam.in </smail>
+	</student>
+
+	<student id="3">
+		<sname> 
+			<fname>Rahul</fname>
+			<lname>Sherif</lname>
+		</sname>
+		<srn> 2023003 </srn>
+		<syear> 3 </syear>
+		<sdept> cse </sdept>
+		<sGpa> 8.9 </sGpa>
+		<smail> rh003@gitam.in </smail>
+	</student>
+	
+	<student id="4">
+		<sname> 
+			<fname>Shekar</fname>
+			<lname>Krishna</lname>
+		</sname>
+		<srn> 2023004 </srn>
+		<syear> 3 </syear>
+		<sdept> cse </sdept>
+		<sGpa> 7.0 </sGpa>
+		<smail> s004@gitam.in </smail>
+	</student>
+
+	<student id="5">
+		<sname> 
+			<fname>Ravi</fname>
+			<lname>Kiran</lname>
+		</sname>
+		<srn> 2023005 </srn>
+		<syear> 3 </syear>
+		<sdept> cse </sdept>
+		<sGpa> 5.0 </sGpa>
+		<smail> rk005@gitam.in </smail>
+	</student>
+
+	<student id="6">
+		<sname> 
+			<fname>Sanjana</fname>
+			<lname>K</lname>
+		</sname>
+		<srn> 2023006 </srn>
+		<syear> 3 </syear>
+		<sdept> cse </sdept>
+		<sGpa> 7.6 </sGpa>
+		<smail> sk006@gitam.in </smail>
+	</student>
+
+	<student id="7">
+		<sname> 
+			<fname>Komal</fname>
+			<lname>Panday</lname>
+		</sname>
+		<srn> 2023007 </srn>
+		<syear> 3 </syear>
+		<sdept> cse </sdept>
+		<sGpa> 8.3 </sGpa>
+		<smail> kp007@gitam.in </smail>
+	</student>
+
+
+	<student id="8">
+		<sname> 
+			<fname>Kusum</fname>
+			<lname>Shailesh</lname>
+		</sname>
+		<srn> 2023008 </srn>
+		<syear> 3 </syear>
+		<sdept> cse </sdept>
+		<sGpa> 9.3 </sGpa>
+		<smail> ks008@gitam.in </smail>
+	</student>
+
+
+	<student id="9">
+		<sname> 
+			<fname>Mohan</fname>
+			<lname>Jain</lname>
+		</sname>
+		<srn> 2023009 </srn>
+		<syear> 3 </syear>
+		<sdept> cse </sdept>
+		<sGpa> 9.09 </sGpa>
+		<smail> mj009@gitam.in </smail>
+	</student>
+
+
+	<student id="10">
+		<sname> 
+			<fname>Mohit</fname>
+			<lname>Kumar</lname>
+		</sname>
+		<srn> 2023010 </srn>
+		<syear> 3 </syear>
+		<sdept> cse </sdept>
+		<sGpa> 7.01 </sGpa>
+		<smail> mk010@gitam.in </smail>
+	</student>
+
+
+	<student id="11">
+		<sname> 
+			<fname>Sneha</fname>
+			<lname>Sharma</lname>
+		</sname>
+		<srn> 2023011 </srn>
+		<syear> 3 </syear>
+		<sdept> cse </sdept>
+		<sGpa> 6.23 </sGpa>
+		<smail> ss011@gitam.in </smail>
+	</student>
+</Student>
+
+
