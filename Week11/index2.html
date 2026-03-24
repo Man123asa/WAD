@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title> AngularJs Counter 2023000885 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+	</head>
+	<body ng-app="app2">
+		<div ng-controller="count">
+			<h2> Counter  </h2>
+			<button ng-click="increment()"> Click! </button>
+			<h1>Total button clicks {{count}}</h1>
+		</div>
+		<script>
+			angular.module("app2",[])
+			.controller("count",function($scope){
+		 	$scope.count=0;
+		 	$scope.increment=function(){
+				$scope.count++;
+			    };
+	   		});
+		</script>
+ 	</body>
+</html>

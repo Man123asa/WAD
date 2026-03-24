@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title> AngularJs Email 2023000885 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+	</head>
+	<body ng-app="">
+		<form name="form" novalidate>
+			<h2> Email Validation  </h2>
+			<input type="email" name="uemail" ng-model="email" required placeholder="example@domain.com"">
+			<div class="error" ng-show="userForm.userEmail.$dirty && userForm.userEmail.$invalid">
+            		 	<span ng-show="userForm.userEmail.$error.required">Email is required.</span>
+            		 	<span ng-show="userForm.userEmail.$error.email">Please enter a valid email address.</span>
+        		</div>
+			<button type="submit" ng-disabled="userForm.$invalid">Register</button>
+		</form>
+		<hr>
+    		<p>Current Input: {{email}}</p>
+    		<p>Is Valid: {{form.uemail.$valid}}</p>
+ 	</body>
+</html>

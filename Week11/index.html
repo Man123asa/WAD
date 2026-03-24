@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title> AngularJs Greeting 2023000885 </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+	</head>
+	<body ng-app="app1">
+		<div ng-controller="Greet">
+			<h2> Welcome to Greetings page </h2>
+			<input type="text" ng-model="message.name" placeholder="Enter your name here..."
+			</br>
+			<h1>Hi {{message.name}}</h1>
+		</div>
+		<script>
+			angular.module("app1",[])
+			.controller("Greet",function($scope){
+		 	$scope.message={};
+		 	$scope.message.name="";
+	   		});
+		</script>
+ 	</body>
+</html>
